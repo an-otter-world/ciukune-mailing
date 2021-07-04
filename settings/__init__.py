@@ -2,5 +2,5 @@
 from split_settings.tools import optional, include
 
 include(
-    '../third-party/ciukune/settings/__init__.py',
+    '../third-party/ciukune/ciukune/settings/__init__.py',
 )
