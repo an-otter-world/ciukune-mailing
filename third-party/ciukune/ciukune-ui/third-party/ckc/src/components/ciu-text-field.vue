@@ -1,0 +1,85 @@
+<template lang="pug">
+div(class="ciu-text-field")
+  input(
+    placeholder=" "
+    :type="password ? 'password' : 'text'"
+    :value="modelValue"
+    @input="valueChanged($event)"
+  )
+  div(class='ciu-text-field-placeholder')
+    div {{placeholder}}
+
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+    props: {
+      'placeholder': String,
+      'modelValue': String,
+      'password': Boolean
+    },
+    emits: [
+        'update:modelValue',
+        'test'
+    ],
+    setup(_, {emit}) {
+      function valueChanged(event: Event) {
+        const input = event.target as HTMLInputElement
+        emit('update:modelValue', input.value)
+      }
+      return {
+          valueChanged
+      }
+    },
+})
+</script>
+
+<style>
+.ciu-text-field {
+  display: grid;
+  padding-top: calc(var(--ciu-font-size) * 0.8);
+}
+
+.ciu-text-field > input {
+  background: transparent;
+  border-bottom: 1px var(--ciu-primary-dark) solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font: var(--ciu-font);
+  grid-area: 1 / 1;
+  transition: border-bottom 0.2s;
+}
+
+.ciu-text-field > input:focus {
+  outline: none;
+  border-bottom: 1px var(--ciu-primary-light) solid;
+}
+
+.ciu-text-field-placeholder {
+  color: var(--ciu-hint-on-surface);
+  opacity: 0.5;
+  display: flex;
+  font-size: 90%;
+  grid-area: 1 / 1;
+  transition-duration: 0.2s;
+  transition-property: transform font-size;
+  z-index: -1;
+}
+
+.ciu-text-field-placeholder > div {
+  align-self: center;
+}
+
+.ciu-text-field > input:focus + .ciu-text-field-placeholder {
+  font-size: 80%;
+  transform: translate(0px, calc(var(--ciu-font-size) * -1.1));
+}
+
+.ciu-text-field > input:not(:placeholder-shown) + .ciu-text-field-placeholder {
+  font-size: 80%;
+  transform: translate(0px, calc(var(--ciu-font-size) * -1.1));
+}
+</style>

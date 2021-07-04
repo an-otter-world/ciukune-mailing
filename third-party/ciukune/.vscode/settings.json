@@ -1,0 +1,13 @@
+{
+    "python.pythonPath": ".env/bin/python",
+    "eslint.options": {
+        "rules": {
+          "import/no-duplicates": "off",
+          "vue/max-attributes-per-line": "off"
+        },
+        "plugins": [
+          "vue",
+          "html"
+        ]
+    }
+}

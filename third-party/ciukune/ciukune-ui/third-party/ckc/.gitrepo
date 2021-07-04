@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/STJV/ckc
+	branch = main
+	commit = e061a26dd333b669d00550004b8d19761662d433
+	method = merge
+	cmdver = 0.4.0
+	parent = 302f87c30c415a2385f878ac42a1c28367c2fe0b

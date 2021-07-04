@@ -1,0 +1,44 @@
+/* Copyright © 2021 STJV contact@stjv.com
+
+  This work is free. You can redistribute it and/or modify it under the
+  terms of the Do What The Fuck You Want To Public License, Version 2,
+  as published by Sam Hocevar. See the COPYING file for more details.
+*/
+
+:root {
+  /* Colors */
+  --ciu-primary: #c62828;
+  --ciu-primary-dark: #8e0000;
+  --ciu-primary-light: #ff5f52;
+  --ciu-on-primary: #ffffff;
+
+  --ciu-secondary: #bdbdbd;
+  --ciu-secondary-dark: #8d8d8d;
+  --ciu-secondary-light: #efefef;
+  --ciu-on-secondary: #000000;
+
+  --ciu-surface: #FAFAFA;
+  --ciu-on-surface: #000000;
+
+  --ciu-background: #FFFFFF;
+  --ciu-on-background: #000000;
+
+  --ciu-error: #db7516;
+  --ciu-on-error: #000000;
+
+  /* Transition / Animation */
+  --ciu-feedback-duration: 0.5s;
+  --ciu-transition-duration: 0.3s;
+
+  /* Layout / Borders */
+  --ciu-border-radius: 3px;
+  --ciu-box-shadow-small: 1px 1px 1px 1px #777777;
+  /* Used to make the shadow fit in the control size, should be equal to offset-x + spread */
+  --ciu-box-shadow-small-margin: 2px;
+  --ciu-box-shadow: 3px 3px 3px 2px #777777;
+  --ciu-spacing: 0.7rem;
+
+  /* Fonts */
+  --ciu-font-size: 1rem;
+  --ciu-font: 400 var(--ciu-font-size) 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
