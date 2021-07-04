@@ -1,3 +1,3 @@
 """WSGI settings."""
 
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'ciukune.wsgi.application'

@@ -2,13 +2,5 @@
 from split_settings.tools import optional, include
 
 include(
-    'auth.py',
-    'base.py',
-    'database.py',
-    'email.py',
-    'i18n.py',
-    'rest.py',
-    'templates.py',
-    'wsgi.py',
-    optional('/etc/ciukune/settings.py')
+    '../third-party/ciukune/settings/__init__.py',
 )

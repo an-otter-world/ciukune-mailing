@@ -1,6 +1,9 @@
 """Database settings, can be overrided in production."""
 from os.path import join
-from settings.base import BASE_DIR
+from os.path import dirname
+from os.path import abspath
+
+BASE_DIR = dirname(dirname(abspath(__file__)))
 
 DATABASES = {
     'default': {
