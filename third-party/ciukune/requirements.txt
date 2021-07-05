@@ -1,6 +1,0 @@
-django
-django-split-settings
-djangorestframework
-djangorestframework_simplejwt
-pillow
-pysaml2
