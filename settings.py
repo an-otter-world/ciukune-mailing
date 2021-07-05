@@ -1,4 +1,4 @@
 """Settings package."""
-from ciukune.settings import *
+from ciukune.core.settings import *
 
 INSTALLED_APPS.append('ciukune.mailing')
