@@ -20,7 +20,7 @@
             "reAttach": true,
             "name": "Attach to Firefox",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}",
+            "webRoot": "${workspaceFolder}/ui",
             "pathMappings": [
                 {
                     "url": "webpack:///",
