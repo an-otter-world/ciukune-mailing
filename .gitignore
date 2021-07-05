@@ -5,7 +5,7 @@
 .env
 .static
 coverage_html
+ciukune/mailing/static/ui
 db.sqlite3
 geckodriver.log
-node_modules
 report.*
