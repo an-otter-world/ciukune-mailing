@@ -1,5 +1,5 @@
 {
-  "name": "ciukune-ui",
+  "name": "@ciukune/mailing",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
