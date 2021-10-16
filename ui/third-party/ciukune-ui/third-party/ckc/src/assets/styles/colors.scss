@@ -20,6 +20,13 @@
   --on-context: var(--on-background);
 }
 
+.surface {
+  --context: var(--surface);
+  --on-context: var(--on-surface);
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
 .primary {
   --context-dark: var(--primary-dark);
   --context-light: var(--primary-light);

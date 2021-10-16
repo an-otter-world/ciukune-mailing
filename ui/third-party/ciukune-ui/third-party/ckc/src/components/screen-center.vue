@@ -4,18 +4,16 @@ div(class="screen-center")
     slot
 </template>
 
-<style>
+<style lang="scss">
 .screen-center {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
-}
-
-.screen-center > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 </style>
-

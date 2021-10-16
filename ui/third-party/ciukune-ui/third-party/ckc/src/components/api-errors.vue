@@ -21,7 +21,8 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style lang="scss">
+
 .resource-errors {
     font-size: 80%;
     color: var(--error);

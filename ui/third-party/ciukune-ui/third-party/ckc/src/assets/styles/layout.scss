@@ -6,13 +6,13 @@
 */
 
 .flex-column {
-    display:flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-row {
-    display:flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-grow {
@@ -23,12 +23,12 @@
   flex-grow: 1;
 }
 
-.page {
+.align-center {
   display: flex;
+  align-items: center;
+}
 
-  > * {
-    flex-basis: 1px;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
+.justify-center {
+  display: flex;
+  justify-content: center;
 }

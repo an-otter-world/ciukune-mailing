@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { App } from 'vue';
+import { App } from 'vue'
 
 import './assets/styles/_index.scss'
 import './font-awesome'
@@ -10,6 +10,7 @@ import CApiInput from './components/api-input.vue'
 import CButton from './components/button.vue'
 import CComponent from './components/component.vue'
 import CDropdown from './components/dropdown.vue'
+import CDropdownMultiple from './components/dropdown-multiple.vue'
 import CGroupbox from './components/groupbox.vue'
 import CIcon from './components/icon.vue'
 import CListbox from './components/listbox.vue'
@@ -21,7 +22,6 @@ import CScreenCenter from './components/screen-center.vue'
 import CSpinner from './components/spinner.vue'
 import CTextField from './components/text-field.vue'
 import { MediaQueryOptions } from './services/media-query'
-import { installServiceManager } from './services/service-manager'
 import { mediaQuery } from './services/media-query'
 
 declare module '@vue/runtime-core' {
@@ -35,26 +35,26 @@ export interface CkcOptions {
 }
 
 export default function install<T>(app: App<T>, options?: CkcOptions) {
-    installServiceManager(app)
-    app
-      .component('CApiErrors', CApiErrors)
-      .component('CApiForm', CApiForm)
-      .component('CApiInput', CApiInput)
-      .component('CButton', CButton)
-      .component('CComponent', CComponent)
-      .component('CDropdown', CDropdown)
-      .component('CGroupbox', CGroupbox)
-      .component('CIcon', CIcon)
-      .component('CInput', CInput)
-      .component('CListbox', CListbox)
-      .component('CLoadingOverlay', CLoadingOverlay)
-      .component('CNavbar', CNavbar)
-      .component('CRouterLink', CRouterLink)
-      .component('CScreenCenter', CScreenCenter)
-      .component('CSpinner', CSpinner)
-      .component('CTextField', CTextField)
+  app
+    .component('CApiErrors', CApiErrors)
+    .component('CApiForm', CApiForm)
+    .component('CApiInput', CApiInput)
+    .component('CButton', CButton)
+    .component('CComponent', CComponent)
+    .component('CDropdown', CDropdown)
+    .component('CDropdownMultiple', CDropdownMultiple)
+    .component('CGroupbox', CGroupbox)
+    .component('CIcon', CIcon)
+    .component('CInput', CInput)
+    .component('CListbox', CListbox)
+    .component('CLoadingOverlay', CLoadingOverlay)
+    .component('CNavbar', CNavbar)
+    .component('CRouterLink', CRouterLink)
+    .component('CScreenCenter', CScreenCenter)
+    .component('CSpinner', CSpinner)
+    .component('CTextField', CTextField)
 
-    app.config.globalProperties.$mq = mediaQuery(options?.mqOptions)
+  app.config.globalProperties.$mq = mediaQuery(options?.mqOptions)
 }
 
 export { Backend } from './services/backend'

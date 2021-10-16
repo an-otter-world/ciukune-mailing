@@ -25,9 +25,11 @@ export default defineComponent({
 })
 </script>
 
-<style>
-.router-link > svg {
-  margin-right: var(--spacing);
+<style lang="scss">
+.router-link {
+  > svg {
+    margin-right: var(--spacing);
+  }
 }
 </style>
 

@@ -18,14 +18,14 @@ import { toRefs } from 'vue'
 
 export default defineComponent({
   props: {
-    'secondary': {
+    secondary: {
       type: Boolean,
       required: false,
-    }
+    },
   },
   setup(props) {
-    const {secondary} = toRefs(props)
-    const isOpen = ref(false);
+    const { secondary } = toRefs(props)
+    const isOpen = ref(false)
     const html = document.documentElement
     const menu = ref<Node | null>(null)
 
@@ -40,16 +40,15 @@ export default defineComponent({
     }
 
     function toggle() {
-      if(!isOpen.value) {
+      if (!isOpen.value) {
         open()
-      }
-      else {
+      } else {
         close()
       }
     }
 
     function onBodyClick(e: Event) {
-      if(!menu.value!.contains(e.target as Node)) {
+      if (!menu.value!.contains(e.target as Node)) {
         close()
       }
     }
@@ -65,87 +64,89 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style lang="scss">
 .navbar {
   display: flex;
   align-items: stretch;
-}
+  z-index: 10;
 
-.navbar > div {
-  align-items: center;
-  display: flex;
-}
+  > div {
+    align-items: center;
+    display: flex;
+  }
 
-.navbar > .brand {
-  flex-grow: 0;
-  margin-left: var(--spacing);
-  margin-right: var(--spacing);
-}
+  > .brand {
+    flex-grow: 0;
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+  }
 
-.navbar.small > .brand {
-  flex-grow: 1;
-  order: 1;
-}
+  &.small {
+    > .brand {
+      flex-grow: 1;
+      order: 1;
+    }
 
-.navbar > .menu {
-  display: flex;
-  flex-grow: 1;
-}
+    > .menu {
+      flex-direction: column;
+      flex-grow: 0;
 
-.navbar.small > .menu {
-  flex-direction: column;
-  flex-grow: 0;
-}
+      > a {
+        display: inline;
+      }
 
-.navbar > .menu > a {
-  display: none;
-}
+      > .links {
+        background: var(--context);
+        flex-direction: column;
+        left: 0;
+        display: none;
+        padding: calc(0.5 * var(--spacing));
+        position: absolute;
+        top: 3rem;
 
-.navbar.small > .menu > a {
-  display: inline;
-}
+        &.opened {
+          display: flex;
+        }
+      }
+    }
 
-.navbar > .menu > .links {
-  display: flex;
-}
+    > .end {
+      order: 2;
+    }
+  }
 
-.navbar.small > .menu > .links {
-  background: var(--context);
-  flex-direction: column;
-  left: 0;
-  display: none;
-  padding: calc(0.5 * var(--spacing));
-  position: absolute;
-  top: 3rem;
-}
+  > .menu {
+    display: flex;
+    flex-grow: 1;
 
-.navbar.small > .menu > .links.opened {
-  display: flex;
-}
+    > a {
+      display: none;
+    }
 
-.navbar > .end {
-  flex-grow: 0;
-  margin-left: var(--spacing);
-  margin-right: var(--spacing);
-}
+    > .links {
+      display: flex;
+    }
 
-.navbar.small > .end {
-  order: 2;
-}
+    & a {
+      align-items: center;
+      padding: var(--spacing);
+      text-transform: uppercase;
+      &:hover {
+        background-color: var(--context-light);
+        text-decoration: none;
+      }
 
-.navbar > .menu a {
-  align-items: center;
-  padding: var(--spacing);
-  text-transform: uppercase;
-}
+      &.router-link-active {
+        background-color: var(--context-dark);
+        text-transform: uppercase;
+      }
+    }
+  }
 
-.navbar > .menu a:hover {
-  background-color: var(--context-light);
-  text-decoration: none;
-}
-
-.navbar > .menu a.router-link-active {
-  background-color: var(--context-dark);
-  text-transform: uppercase;
+  .end {
+    flex-grow: 0;
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+  }
 }
 </style>

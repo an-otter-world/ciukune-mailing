@@ -22,17 +22,9 @@ class ServiceManager {
   private _services: Record<any, Object> = {}
 }
 
-const ServiceManagerKey : InjectionKey<ServiceManager> = Symbol()
+const ServiceManagerInstance = new ServiceManager()
+
 
 export function getService<TService extends Object>(key: InjectionKey<TService>, constructor: ServiceConstructor<TService>) {
-  const manager = inject(ServiceManagerKey)
-  if(!manager) {
-    throw new Error("No service manager available, please install it in Vue JS application through the service-manager.ts/install method")
-  }
-
-  return manager.get(key, constructor)
-}
-
-export function installServiceManager<T>(app: App<T>) {
-  app.provide(ServiceManagerKey, new ServiceManager())
+  return ServiceManagerInstance.get(key, constructor)
 }
