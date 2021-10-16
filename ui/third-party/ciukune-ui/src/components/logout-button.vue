@@ -1,7 +1,7 @@
 <template lang="pug">
 a(@click="logout()" href="#" class="logout-button")
   div(class="c-router-link c-flex-row")
-    ciu-icon(icon="sign-out-alt")
+    c-icon(icon="sign-out-alt")
     div {{ $t("logout-button.logout") }}
 </template>
 
