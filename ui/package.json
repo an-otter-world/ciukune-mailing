@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@ciukune/core": "github:an-otter-world/ciukune-ui#dev"
+    "@ciukune/core": "./third-party/ciukune-ui"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.5",
