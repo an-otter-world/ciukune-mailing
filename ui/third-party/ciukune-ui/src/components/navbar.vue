@@ -8,6 +8,7 @@ c-navbar
       template(#header)
         c-icon(icon="user-circle")
       c-router-link(to="/profile" icon="user-circle") {{ $t('navbar.profile') }}
+      c-router-link(to="/admin" icon="user-circle") {{ $t('navbar.admin') }}
       logout-button
 </template>
 

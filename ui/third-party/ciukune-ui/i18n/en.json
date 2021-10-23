@@ -8,7 +8,8 @@
     "title": "Ciu Kune - Login"
   },
   "navbar": {
-    "profile": "Profile"
+    "profile": "Profile",
+    "admin": "Administration"
   },
   "logout-button": {
     "logout": "Sign Out"
