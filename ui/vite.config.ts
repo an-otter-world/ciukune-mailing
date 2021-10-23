@@ -6,7 +6,10 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     proxy: {
-      '/api': 'http://localhost:8000/',
+      '/api': {
+        target: 'http://127.0.0.1:8000/',
+        xfwd: true
+      }
     }
   },
   build: {
@@ -17,7 +20,7 @@ export default defineConfig({
       formats: ['es']
     },
     rollupOptions: {
-      external: ['vue', '@ciukune/core', '@ciukune/ckc'],
+      external: ['vue', '@ciukune/core', '@dontnod/wlh'],
       treeshake: false,
       output: {
         assetFileNames: 'css/ciukune.mailing[extname]',
