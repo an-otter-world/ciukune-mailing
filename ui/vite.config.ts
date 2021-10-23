@@ -28,6 +28,9 @@ export default defineConfig({
         entryFileNames: 'js/ciukune.mailing.js',
         dir: '../ciukune/mailing/static/ui/',
         minifyInternalExports: false,
+        paths: {
+          '@ciukune/core': './ciukune.core.js'
+        }
       }
     }
   },
