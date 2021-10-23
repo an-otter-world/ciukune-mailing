@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/an-otter-world/ciukune-ui
+	branch = dev
+	commit = 54f5989dc9c8e82c858ffc027db67d6278d52037
+	parent = a7a3958d55ce487b7313bb72fdf17c129e52a00e
+	method = merge
+	cmdver = 0.4.0

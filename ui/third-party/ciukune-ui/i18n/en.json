@@ -1,0 +1,20 @@
+{
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "reset-password": "Reset Password",
+    "register": "Register",
+    "title": "Ciu Kune - Login"
+  },
+  "navbar": {
+    "profile": "Profile"
+  },
+  "logout-button": {
+    "logout": "Sign Out"
+  },
+  "profile": {
+    "email": "E-Mail",
+    "username": "Username"
+  }
+}
