@@ -1,4 +1,9 @@
-import {CiukuneApp} from '@ciukune/core'
+import {CiukuneApp, AdminMenu, User} from '@ciukune/core'
 import Admin from './views/admin/mailing.vue'
 
-CiukuneApp.$router.addRoute('Admin', { path: 'mailing', component: Admin})
+AdminMenu.addItem({
+  component: Admin,
+  path: 'mailing',
+  icon: 'question',
+  label: 'Mailing'
+})

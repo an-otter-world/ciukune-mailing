@@ -1,27 +1,35 @@
 <template>
+<div>
   <c-component>
-    <ul>
-      <li>
-        <router-link to="/admin/general">
-          General
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/admin/mailing">
-          Mailing
-        </router-link>
-      </li>
-    </ul>
+    <plugin-menu :menu="menu"/>
+  </c-component>
+  <c-component>
     <router-view/>
   </c-component>
+</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, reactive } from 'vue'
+import PluginMenu, { Menu } from '../components/common/plugin-menu.vue'
+import General from './admin/general.vue'
+
+const AdminMenu = new Menu('/admin')
+export { AdminMenu }
 
 export default defineComponent({
+  components: { PluginMenu },
   setup() {
-    return {}  
+    AdminMenu.addItem({
+      component: General,
+      path: '/general',
+      icon: 'user',
+      label: 'General'
+    })
+
+    return {
+      menu: reactive(AdminMenu)
+    }  
   },
 })
 </script>

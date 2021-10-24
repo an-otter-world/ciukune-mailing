@@ -15,11 +15,5 @@ export const routes = [{
     path: "/admin",
     name: "Admin",
     component: Admin,
-    children: [
-      {
-        path: 'general',
-        component: General
-      }
-    ]
   }
 ];
