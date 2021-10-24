@@ -23,14 +23,11 @@ class AppConfig(CiukuneAppConfig):
     path = dirname(__file__)
 
     def get_urls(self) -> Iterable[URLPattern]:
-        from .views.test import TestView
-        from ciukune.mailing.views.mail import MailViewSet
-        from ciukune.core.serializers.user import UserSerializer
-        UserSerializer.add_field_name('mail_set')
+        UserSerializer.add_field_name('mail')
 
         yield re_path(r'api/',
             include([
-                path('test', TestView.as_view(), name='test'),
-                path('mails/<int:pk>', MailViewSet.as_view(_OBJECT_VIEW_MAPPING), name='mail-detail'),
+                #path('test', TestView.as_view(), name='test'),
+                #path('mails/<int:pk>', MailViewSet.as_view(_OBJECT_VIEW_MAPPING), name='mail-detail'),
             ])
         )

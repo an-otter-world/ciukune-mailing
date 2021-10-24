@@ -4,3 +4,7 @@ pydocstyle
 pylint
 pylint-django
 splinter
+prospector
+mypy
+pyroma
+djangorestframework-stubs
